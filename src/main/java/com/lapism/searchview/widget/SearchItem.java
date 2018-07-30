@@ -33,6 +33,7 @@ public class SearchItem implements Parcelable {
     private int icon_2_resource;
     private CharSequence title;
     private CharSequence subtitle;
+    private int id; // id to implement a simple way to track the SearchItem instance
     private Context context;
 
     public SearchItem(Context context) {
@@ -106,6 +107,14 @@ public class SearchItem implements Parcelable {
 
     public CharSequence getSubtitle() {
         return this.subtitle;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return this.id;
     }
 
     public void setSubtitle(CharSequence subtitle) {
